@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Employment Application Form</title>
+        <!-- Shortcut Icon -->
+        <link rel="shortcut icon" href="form.png">
+        <!-- CSS Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- JavaScript -->
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+
+        <!-- Image Form -->
+        <img src="form.png" alt="Form" id="form">
+
+        <h1 class="header">Employment Application Form</h1>
+        <hr>
+        <div class="article">
+        <form>
+            <!-- First Name -->
+            First Name<br>
+            <input type="text" name="firstName" id="firstName" onblur="validateFirstName();"><br>
+            <span id="firstNamePrompt">&nbsp;</span><br><br>
+            <!-- Last Name -->
+            Last Name<br>
+            <input type="text" name="lastName" id="lastName" onblur="validateLastName();"><br>
+            <span id="lastNamePrompt">&nbsp;</span><br><br>
+            <!-- Email Address -->
+            Email Address<br>
+            <input type="email" name="email" id="email" onblur="validateEmail();"><br>
+            <span id="emailPrompt">&nbsp;</span><br><br>
+            <!-- Phone Number -->
+            Phone Number<br>
+            <input type="tel" name="phone" id="phone" onblur="validatePhone();" placeholder="xxx-xxx-xxxx"><br>
+            <span id="phonePrompt">&nbsp;</span><br><br>
+            <!-- Position Applied -->
+            Which position are you applying for?<br>
+            <select>
+                <option value="FEWD">Front End Web Developer</option>
+                <option value="FSWD">Full Stack Web Developer</option>
+                <option value="AD">Android Developer</option>
+                <option value="ID">iOS Developer</option>
+            </select>
+            <br><br>
+            <!-- Technical Skills List -->
+            What skills do you have for this position?<br>
+            <input type="checkbox" name="html" value="HTML"> HTML<br>
+            <input type="checkbox" name="css" value="CSS"> CSS<br>
+            <input type="checkbox" name="js" value="JS"> JavaScript<br>
+            <input type="checkbox" name="jquery" value="jQuery"> jQuery<br>
+            <input type="checkbox" name="angularjs" value="AngularJS"> AngularJS<br>
+            <input type="checkbox" name="reactjs" value="ReactJS"> ReactJS<br>
+            <input type="checkbox" name="nodejs" value="NodeJS"> NodeJS<br>
+            <input type="checkbox" name="php" value="PHP"> PHP<br>
+            <input type="checkbox" name="ruby" value="Ruby"> Ruby<br>
+            <input type="checkbox" name="python" value="Python"> Python<br>
+            <input type="checkbox" name="java" value="Java"> Java<br>
+            <input type="checkbox" name="objective-c" value="Objective C"> Objective C<br>
+            <input type="checkbox" name="swift" value="Swift"> Swift<br><br>
+            <!-- Relocate -->
+            Are you willing to relocate?<br>
+            <input type="radio" name="relocate" value="Yes">Yes<br>
+            <input type="radio" name="relocate" value="No">No<br><br>
+            <!-- Start Work -->
+            When can you start work?<br>
+            <input type="date" name="date"><br><br>
+            <!-- Portfolio Website Link -->
+            Portfolio Website Link<br>
+            <input type="text" name="website"><br><br>
+            <!-- Upload Your Resume -->
+            Attach a Copy of Resume<br>
+            <input type="file" name="fileToUpload"><br><br>
+            <!-- Short Description of the Form -->
+            <textarea rows="4" cols="50">The primary purpose of an application form is to prescreen job applicants. Contact information, employment history, educational background and references are standard pieces of information communicated from applicant to employer on job application forms.</textarea>
+        </form>
+        </div>
+    </body>
+</html>

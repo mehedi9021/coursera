@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Form</title>
+        <meta charset="utf-8">
+        <style>
+        body {
+            background-color: lightblue;
+            color: black;
+        }
+
+        h1 {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #form {
+            text-align: center;
+        }
+
+        #submit {
+            text-align: center;
+        }
+
+        #display {
+            font-size: 60px;
+            color: grey;
+        }
+        </style>
+        <script>
+            function myFunction() {
+                document.getElementById('display').innerHTML = document.getElementById('firstname').value + " " + document.getElementById('lastname').value;
+            }
+
+            function formReset() {
+                document.getElementById("form").reset();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>HTML Form</h1>
+        <form id="form">
+            <strong>First Name:</strong>
+            <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" onblur="myFunction();" required><br><br>
+
+            <strong>Last Name:</strong>
+            <input type="text" name="lastname" id="lastname" placeholder="Enter your last name" onblur="myFunction();" required><br><br>
+
+            <strong>Phone:</strong>
+            <input type="text" name="phone" placeholder="Enter your phone number"><br><br>
+
+            <strong>Gender:</strong>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female<br><br>
+
+            <strong>Birthday:</strong>
+            <input type="date" name="birthday"><br><br>
+
+            <strong>Age:</strong>
+            <input type="number" name="age" min="0" max="150"><br><br>
+        </form>
+
+        <div id="submit">
+            <button type="submit" value="Submit" onclick="formReset();">Submit</button>
+            <p><span id='display'></span></p>
+        </div>
+
+    </body>
+</html>
